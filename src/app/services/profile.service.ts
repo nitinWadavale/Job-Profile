@@ -24,7 +24,7 @@ export class ProfileService {
       email: 'nwadavale08@gmail.com',
       linkedin: 'https://www.linkedin.com/in/nitin-wadavale-666373238',
  
-      github: 'https://github.com/nitin-wadavale',
+      github: 'https://github.com/nitinWadavale',
       website: 'https://www.oneinsure.com',
       avatar: 'assets/avatar.png'
     };
