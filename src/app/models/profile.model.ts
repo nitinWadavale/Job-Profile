@@ -4,6 +4,9 @@ export interface PersonalInfo {
   tagline: string;
   summary: string;
   dob: string;
+  nationality: string;
+  maritalStatus: string;
+  availability: string;
   address: string;
   city: string;
   state: string;
