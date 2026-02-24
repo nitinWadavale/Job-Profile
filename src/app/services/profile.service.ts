@@ -23,8 +23,8 @@ export class ProfileService {
       phone: '+91 7977518951',
       email: 'nwadavale08@gmail.com',
       linkedin: 'https://www.linkedin.com/in/nitin-wadavale-666373238',
- 
-      github: 'https://github.com/nitinWadavale',
+      instagram: 'https://www.instagram.com/_ni3_08?igsh=ejR5NnU0aXFubGF4',
+      github: 'https://github.com/nitinwadavale',
       website: 'https://www.oneinsure.com',
       avatar: 'assets/avatar.png'
     };
