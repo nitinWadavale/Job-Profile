@@ -1,0 +1,47 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="timeline">
+      <div
+        class="timeline-item"
+        *ngFor="let exp of experiences; let i = index"
+        [class.current]="exp.current">
+
+        <div class="timeline-dot">
+          <span *ngIf="exp.current" class="pulse"></span>
+        </div>
+
+        <div class="timeline-card">
+          <div class="exp-header">
+            <div class="exp-meta">
+              <h3 class="exp-role">{{ exp.role }}</h3>
+              <p class="exp-company">{{ exp.company }}</p>
+            </div>
+            <div class="exp-info">
+              <span class="exp-badge" [class.current-badge]="exp.current">{{ exp.type }}</span>
+              <span class="exp-duration">{{ exp.duration }}</span>
+              <span class="exp-location">&#x1F4CD; {{ exp.location }}</span>
+            </div>
+          </div>
+
+          <p class="exp-description">{{ exp.description }}</p>
+
+          <div class="exp-responsibilities">
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li *ngFor="let r of exp.responsibilities">{{ r }}</li>
+            </ul>
+          </div>
+
+          <div class="exp-tech">
+            <span class="tech-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

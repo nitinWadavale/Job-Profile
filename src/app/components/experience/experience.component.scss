@@ -1,0 +1,202 @@
+.experience-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #0a0a1a 0%, #0f0f1e 100%);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #6c63ff, #a78bfa);
+    border-radius: 2px;
+    margin: 0 auto;
+  }
+}
+
+.timeline {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #6c63ff, rgba(108, 99, 255, 0.1));
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 2.5rem;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: #1a1a3e;
+  border: 2px solid rgba(108, 99, 255, 0.4);
+  border-radius: 50%;
+  z-index: 1;
+
+  .pulse {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #6c63ff;
+    animation: pulse-ring 2s ease-out infinite;
+  }
+}
+
+.timeline-item.current .timeline-dot {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  box-shadow: 0 0 15px rgba(108, 99, 255, 0.5);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(108, 99, 255, 0.4);
+    transform: translateX(4px);
+  }
+}
+
+.timeline-item.current .timeline-card {
+  border-color: rgba(108, 99, 255, 0.35);
+  background: rgba(108, 99, 255, 0.04);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.exp-meta {
+  .exp-role {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+  }
+
+  .exp-company { font-size: 0.95rem; color: #6c63ff; font-weight: 600; }
+}
+
+.exp-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+
+  .exp-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    background: rgba(108, 99, 255, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &.current-badge {
+      background: rgba(34, 197, 94, 0.15);
+      color: #22c55e;
+      border-color: rgba(34, 197, 94, 0.3);
+    }
+  }
+
+  .exp-duration { font-size: 0.82rem; color: rgba(255, 255, 255, 0.5); }
+  .exp-location { font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); }
+}
+
+.exp-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.exp-responsibilities {
+  margin-bottom: 1rem;
+
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    margin: 0;
+
+    li {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin-bottom: 0.3rem;
+      &::marker { color: #6c63ff; }
+    }
+  }
+}
+
+.exp-tech { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.tech-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  background: rgba(108, 99, 255, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .timeline::before { left: 16px; }
+  .timeline-item { padding-left: 50px; }
+  .timeline-dot { left: 7px; width: 16px; height: 16px; }
+  .exp-header { flex-direction: column; }
+  .exp-info { align-items: flex-start; }
+}
